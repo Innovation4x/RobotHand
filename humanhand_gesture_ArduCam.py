@@ -55,6 +55,8 @@ with mp_hands.Hands(
             continue
 
         image = cam.get(True)
+        while not cam.empty():
+            cam.get(True)
         
         # To improve performance, optionally mark the image as not writeable to
         # pass by reference.
